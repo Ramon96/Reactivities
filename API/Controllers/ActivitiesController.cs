@@ -1,5 +1,6 @@
 using Application.Activities;
 using Domain;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -12,7 +13,7 @@ namespace Reactivities.Controllers
         {
             return HandleResult(await Mediator.Send(new List.Query()));
         }
-
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> GetActivity(Guid id)
         {
