@@ -13,7 +13,7 @@ namespace Reactivities.DTOs
         public string Email { get; set; }
         
         [Required]
-        [RegularExpression("(?=.*\\d)(?=.*[a-z])(?=.[A-Z].{4,8}$)", ErrorMessage = "Password must be complexer")]
+        [RegularExpression("(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$", ErrorMessage = "Password must be complexer")]
         public string Password { get; set; }
         
         [Required]
