@@ -3,8 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Header, Segment, Image, Button } from "semantic-ui-react";
 import { useStore } from "../../app/stores/store";
-import LoginForm from "../activities/users/LoginForm";
-import RegisterForm from "../activities/users/RegisterForm";
+import LoginForm from "../users/LoginForm";
+import RegisterForm from "../users/RegisterForm";
 
 export default observer( function HomePage() {
     const { userStore, modalStore } = useStore();
