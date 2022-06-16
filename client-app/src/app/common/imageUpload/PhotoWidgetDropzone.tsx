@@ -20,7 +20,9 @@ export default function PhotoWidgetDropzone( {setFiles}: Props ) {
         borderColor: 'green'
     }
     const onDrop = useCallback((acceptedFiles: any) => {
-        setFiles(acceptedFiles.map((file: any) => Object.assign(file, { preview: URL.createObjectURL(file) })));
+        setFiles(acceptedFiles.map((file: any) => Object.assign(file, {
+            preview: URL.createObjectURL(file)
+        })))
     }, [setFiles])
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });

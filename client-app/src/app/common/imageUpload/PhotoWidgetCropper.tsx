@@ -10,7 +10,7 @@ interface Props {
 export default function PhotoWidgetCropper({ imagePreview, setCropper }: Props) {
   return (
     <Cropper
-        src={"image"}
+        src={imagePreview}
         style={{height: 200, width: "100%"}}
         initialAspectRatio={1}
         aspectRatio={1}
@@ -20,8 +20,6 @@ export default function PhotoWidgetCropper({ imagePreview, setCropper }: Props) 
         autoCropArea={1}
         background={false}
         onInitialized={cropper => setCropper(cropper)}
-    >
-
-    </Cropper>
+    />
   )
 }
